@@ -30,9 +30,119 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <div class = "row">
+      <div class = "col-sm-2 hour 9AM">9:00AM</div>
+      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 saveBtn">Save Event</div>
     </div>
+
+    <div class = "row">
+      <div class = "col-sm-2 hour 9AM">10:00AM</div>
+      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 saveBtn">Save Event</div>
+
+    </div>
+
+    <div class = "row">
+      <div class = "col-sm-2 hour 9AM">11:00AM</div>
+      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 saveBtn">Save Event</div>
+
+    </div>
+
+    <div class = "row">
+      <div class = "col-sm-2 hour 9AM">12:00PM</div>
+      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 saveBtn">Save Event</div>
+
+    </div>
+
+    <div class = "row">
+      <div class = "col-sm-2 hour 9AM">1:00pm</div>
+      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 saveBtn">Save Event</div>
+
+    </div>
+
+    <div class = "row">
+      <div class = "col-sm-2 hour 9AM">2:00PM</div>
+      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 saveBtn">Save Event</div>
+
+    </div>
+
+    <div class = "row">
+      <div class = "col-sm-2 hour">3:00PM</div>
+      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 saveBtn">Save Event</div>
+
+    </div>
+
+    <div class = "row">
+      <div class = "col-sm-2 hour">4:00PM</div>
+      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 saveBtn">Save Event</div>
+
+    </div>
+
+    <div class = "row">
+      <div class = "col-sm-2 hour">5:00PM</div>
+      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 saveBtn">Save Event</div>
+
+    </div>
+
+      <div style = "font-size:25px" id = "todaysdate"></div>
+
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+
+    <script type="text/javascript">
+
+    var savedEvent = [   {
+      hour : 9,
+      strEvent : ''
+    },
+    {
+    hour : 10,
+    strEvent: ''
+    },
+    {
+    hour : 11,
+    strEvent: ''
+    },
+    {
+    hour : 12,
+    strEvent: ''
+    },
+    {
+    hour : 13,
+    strEvent: ''
+    },
+    {
+    hour : 14,
+    strEvent: ''
+    }
+     ]
+
+      var numHours = document.querySelector(".hour")
+    for(var i; i < )
+
+      let now = moment();
+      let time = now.format();
+      console.log(now.format());
+      document.getElementById("todaysdate").innerHTML = time;
+
+      $('#saveBtn').on('click', function() {
+
+
+
+      })
+
+    </script>
+
+      </body>
 </html>
