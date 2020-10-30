@@ -30,78 +30,81 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class = "row">
-      <div class = "col-sm-2 hour 9AM">9:00AM</div>
-      <div class = "col-sm-8 time-block">Insert plans here</div>
+  <!--   <div class = "row">
+      <div class = "col-sm-2 hour">9:00AM</div>
+      <div id='9' class = "col-sm-8 td time-block">Insert plans here</div>
       <div class = "col-sm-2 saveBtn">Save Event</div>
     </div>
 
     <div class = "row">
-      <div class = "col-sm-2 hour 9AM">10:00AM</div>
-      <div class = "col-sm-8 time-block">Insert plans here</div>
-      <div class = "col-sm-2 saveBtn">Save Event</div>
-
-    </div>
-
-    <div class = "row">
-      <div class = "col-sm-2 hour 9AM">11:00AM</div>
-      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class= "col-sm-2 hour">10:00AM</div>
+      <div id='10' class = "col-sm-8 td time-block">Insert plans here</div>
       <div class = "col-sm-2 saveBtn">Save Event</div>
 
     </div>
 
     <div class = "row">
-      <div class = "col-sm-2 hour 9AM">12:00PM</div>
-      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 hour">11:00AM</div>
+      <div id='11' class = "col-sm-8 td time-block">Insert plans here</div>
       <div class = "col-sm-2 saveBtn">Save Event</div>
 
     </div>
 
     <div class = "row">
-      <div class = "col-sm-2 hour 9AM">1:00pm</div>
-      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 hour">12:00PM</div>
+      <div id='12' class= "col-sm-8 td time-block">Insert plans here</div>
       <div class = "col-sm-2 saveBtn">Save Event</div>
 
     </div>
 
     <div class = "row">
-      <div class = "col-sm-2 hour 9AM">2:00PM</div>
-      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div class = "col-sm-2 hour">1:00pm</div>
+      <div id='13' class = "col-sm-8 td time-block">Insert plans here</div>
+      <div class = "col-sm-2 saveBtn">Save Event</div>
+
+    </div>
+
+    <div class = "row">
+      <div class = "col-sm-2 hour">2:00PM</div>
+      <div id='14' class = "col-sm-8 td time-block">Insert plans here</div>
       <div class = "col-sm-2 saveBtn">Save Event</div>
 
     </div>
 
     <div class = "row">
       <div class = "col-sm-2 hour">3:00PM</div>
-      <div class = "col-sm-8 time-block">Insert plans here</div>
+      <div id='15' class = "col-sm-8 td time-block">Insert plans here</div>
       <div class = "col-sm-2 saveBtn">Save Event</div>
 
     </div>
 
-    <div class = "row">
+    <div class = "row 4pmrow">
       <div class = "col-sm-2 hour">4:00PM</div>
-      <div class = "col-sm-8 time-block">Insert plans here</div>
-      <div class = "col-sm-2 saveBtn">Save Event</div>
+      <div id='16' class = "col-sm-8 td time-block textarea">Insert plans here</div>
+      <div class = "col-sm-2 btn-primary saveBtn 4btn">Save Event</div>
+  
 
     </div>
 
-    <div class = "row">
+    <div class = "row ">
       <div class = "col-sm-2 hour">5:00PM</div>
-      <div class = "col-sm-8 time-block">Insert plans here</div>
-      <div class = "col-sm-2 saveBtn">Save Event</div>
+      <div id='17' class = "col-sm-8 td time-block textarea">Insert plans here</div>
+      <div id='5btn' class = "col-sm-2 saveBtn">Save Event</div>
 
-    </div>
+    </div> -->
 
       <div style = "font-size:25px" id = "todaysdate"></div>
 
-    </div>
-
+    </div> 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <script type="text/javascript">
 
+
+    // array of objects that include which hour and what the user input as an event
+    // done with 24hr time
     var savedEvent = [   {
       hour : 9,
       strEvent : ''
@@ -125,16 +128,119 @@
     {
     hour : 14,
     strEvent: ''
+    },
+    {
+    hour : 15,
+    strEvent: ''
+    },
+    {
+    hour : 16,
+    strEvent: ''
+    },
+    {
+    hour : 17,
+    strEvent: ''
     }
+
      ]
 
-      var numHours = document.querySelector(".hour")
-    for(var i; i < )
+     
+     var currTime = moment()
+     var currDate = Date()
 
-      let now = moment();
-      let time = now.format();
-      console.log(now.format());
-      document.getElementById("todaysdate").innerHTML = time;
+     console.log(currDate)
+    //let time = currTime.format();
+    console.log(currTime.format('day,month, year'));
+    console.log(currTime.format("DD"))
+    console.log(currTime.format("MM"))
+    console.log(currTime.format("YY"))
+
+    console.log(moment().dayOfYear())
+
+    console.log(currTime.month(currTime.format("MM")))
+
+  // return what hour it currently is
+  //  console.log(currTime.hour())
+
+    $('p#currentDay').text(currDate)
+
+    var currHour = currTime.hour()
+
+    $('.container').append('<div class="row')
+
+
+    var mytable = $('<table></table>').attr({ id: "basicTable" });
+
+
+   // var xday = currTime.format('DD')
+
+
+    //console.log($(".currTime").text(moment(currTime).format('h:mm:ss a')));
+
+     // var numHours = document.querySelector(".hour")
+      for(var i; i < savedEvent.length; i++)
+    {
+      var elHour = savedEvent[i].hour
+     
+      if(elHour < currHour)
+      {
+
+      var row = $('<tr></tr>').attr({ class: ["textarea", "row", "past"].join(' ') }).appendTo(mytable);
+      }
+      else if(elHour === currHour)
+      {
+        var row = $('<tr></tr>').attr({ class: ["textarea", "row", "present"].join(' ') }).appendTo(mytable);
+
+      }
+      if(elHour > currHour)
+      {
+        var row = $('<tr></tr>').attr({ class: ["textarea", "row", "future"].join(' ') }).appendTo(mytable);
+      }
+    }
+
+    mytable.appendTo(".container")
+    
+      
+     
+     
+   //   var id = savedEvent[i]
+   //   id = '#' + id.toString()
+
+   //   var currRows = $("<row>")
+   //   var currCol = $('<col>')
+      // create variable for hour of this element
+    //  var elHour = savedEvent[i].hour
+     
+      if(elHour < currHour)
+      {
+        console.log(id)
+        $(id).setAttr("class", 'past')
+      }
+
+    } 
+
+      //  $('<col-sm-2>').text(savedEvent[i].hour)
+
+    //  <div class = "row ">
+    //  <div class = "col-sm-2 hour">5:00PM</div>
+    //  <div id='17' class = "col-sm-8 time-block textarea">Insert plans here</div>
+    //  <div id='5btn' class = "col-sm-2 saveBtn">Save Event</div>
+
+    //    $()
+
+    //  }
+
+      
+
+      
+
+    //}
+    
+
+
+      //console.log(${currTime.toString()})
+      
+      //document.getElementById("todaysdate").innerHTML = time;
 
       $('#saveBtn').on('click', function() {
 
