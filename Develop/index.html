@@ -28,53 +28,57 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
+    <div id=day class="container">
       <!-- Timeblocks go here -->
-  <!--   <div class = "row">
+      <table id ="dayPlanner"></table>
+
+     <div class = "row">
       <div class = "col-sm-2 hour">9:00AM</div>
-      <div id='9' class = "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 saveBtn">Save Event</div>
+      <div id='9' class = "col-sm-9">
+        <form><input type='textbox' class= 'col-sm-9' name='9'></form>
+      </div>
+      <div class = "col-sm-1 btn-primary saveBtn">Save Event</div>
     </div>
 
     <div class = "row">
       <div class= "col-sm-2 hour">10:00AM</div>
       <div id='10' class = "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 saveBtn">Save Event</div>
+      <div class = "col-sm-1 btn-primary saveBtn">Save Event</div>
 
     </div>
 
     <div class = "row">
       <div class = "col-sm-2 hour">11:00AM</div>
       <div id='11' class = "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 saveBtn">Save Event</div>
+      <div class = "col-sm-2 btn-primary saveBtn">Save Event</div>
 
     </div>
 
     <div class = "row">
       <div class = "col-sm-2 hour">12:00PM</div>
       <div id='12' class= "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 saveBtn">Save Event</div>
+      <div class = "col-sm-2 btn-primary saveBtn">Save Event</div>
 
     </div>
 
     <div class = "row">
       <div class = "col-sm-2 hour">1:00pm</div>
       <div id='13' class = "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 saveBtn">Save Event</div>
+      <div class = "col-sm-2 btn-primary saveBtn">Save Event</div>
 
     </div>
 
     <div class = "row">
       <div class = "col-sm-2 hour">2:00PM</div>
       <div id='14' class = "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 saveBtn">Save Event</div>
+      <div class = "col-sm-2 btn-primary saveBtn">Save Event</div>
 
     </div>
 
     <div class = "row">
       <div class = "col-sm-2 hour">3:00PM</div>
       <div id='15' class = "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 saveBtn">Save Event</div>
+      <div class = "col-sm-2 btn-primary saveBtn">Save Event</div>
 
     </div>
 
@@ -89,9 +93,9 @@
     <div class = "row ">
       <div class = "col-sm-2 hour">5:00PM</div>
       <div id='17' class = "col-sm-8 td time-block textarea">Insert plans here</div>
-      <div id='5btn' class = "col-sm-2 saveBtn">Save Event</div>
+      <div id='5btn' class = "col-sm-2 btn-primary saveBtn">Save Event</div>
 
-    </div> -->
+    </div> 
 
       <div style = "font-size:25px" id = "todaysdate"></div>
 
@@ -178,9 +182,18 @@
     //console.log($(".currTime").text(moment(currTime).format('h:mm:ss a')));
 
      // var numHours = document.querySelector(".hour")
+    
+    // create a table with different colors based on 
       for(var i; i < savedEvent.length; i++)
     {
+
+
+
+      $('#dayPlanner').append
+      
       var elHour = savedEvent[i].hour
+
+      $()
      
       if(elHour < currHour)
       {
