@@ -7,6 +7,7 @@ var currHour = moment().format('h');
 
 console.log(currTime)
 
+console.log("current Hour")
 console.log(currHour)
 
 var hourNow24= parseInt(moment().format('HH'));
@@ -49,7 +50,7 @@ $('#btn9').click(function() {
  //   localStorage.removeItem('text1');
  // }
 
- savedEvent[0].strEvent = $('#9').val()
+ savedEvent[0].strEvent = $('#event9').val()
 
  localStorage.setItem("9AM", savedEvent[0].strEvent)
 
@@ -156,40 +157,24 @@ function eventColors() {
 
     for (var i = 9; i <= 17 ; i++) { 
      
-     //   var hourInInt = parseInt($('#time'+i).text());
-
-    //  if (hourInInt < 9) {
-    //    hourInInt = hourInInt + 12;
-   //   }
-
+   // add class for present
       if(i === hourNow24)
       {
           $('#event'+i).addClass('present')
       }
+      // color code the past block using past class
       else if(i < hourNow24 - 5)
       {
           $('#event'+i).addClass('past')
       }
+      // color the future blocks with the future class
       else{
           $('#event'+i).addClass('future')
       }
       
-   //   if (hourInInt == hourNow24) {
-   //     $('#text'+i).css('background-color', '#FB8F78');
-   //     continue;
-   //   }
-      
-   //   if (hourInInt < hourNow24) {
-   //     $('#text'+i).css('background-color', 'lightgray');
-   //   } 
-   //   else {
-   //     $('#text'+i).css('background-color', 'lightgreen');
-   //   }
+   
     }
 
   }
- // else {
- //   clearInterval(TIMER);
- //   $('textarea').css('background-color', 'pink');
- // }
+ 
 }
