@@ -28,81 +28,75 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div id=day class="container">
+    <div class="container">
       <!-- Timeblocks go here -->
-      <table id ="dayPlanner"></table>
-
      <div class = "row">
-      <div class = "col-sm-2 hour">9:00AM</div>
-      <div id='9' class = "col-sm-9">
-        <form><input type='textbox' class= 'col-sm-9' name='9'></form>
-      </div>
-      <div class = "col-sm-1 btn-primary saveBtn">Save Event</div>
+      <div id='hour9' class ="col-2 time-block">9:00AM</div>
+      <textarea id='event9' class = "col-9 textarea"></textarea>
+      <button id='btn9' class= "col-1 btn-primary saveBtn">Save Event</button>
+     </div>
+   
+    <div class = "row">
+      <div id= 'hour10' class= "col-2 time-block">10:00AM</div>
+      <textarea id='event10' class = "col-9 textarea">Insert plans here</textarea>
+      <button id= 'btn10' class = "col-1 btn-primary saveBtn">Save Event</button>
     </div>
 
     <div class = "row">
-      <div class= "col-sm-2 hour">10:00AM</div>
-      <div id='10' class = "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-1 btn-primary saveBtn">Save Event</div>
-
+      <div id= 'hour11' class = "col-2 time-block">11:00AM</div>
+      <textarea id='event11' class = "col-9 textarea">Insert plans here</textarea>
+      <button id='btn11' class = "col-1 btn-primary saveBtn">Save Event</button>
     </div>
 
     <div class = "row">
-      <div class = "col-sm-2 hour">11:00AM</div>
-      <div id='11' class = "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 btn-primary saveBtn">Save Event</div>
-
+      <div id='hour12' class = "col-2 time-block">12:00PM</div>
+      <textarea id='event12' class= "col-9 textarea">Insert plans here</textarea>
+      <button id='btn12' class = "col-1 btn-primary saveBtn">Save Event</button>
     </div>
 
     <div class = "row">
-      <div class = "col-sm-2 hour">12:00PM</div>
-      <div id='12' class= "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 btn-primary saveBtn">Save Event</div>
-
-    </div>
-
-    <div class = "row">
-      <div class = "col-sm-2 hour">1:00pm</div>
-      <div id='13' class = "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 btn-primary saveBtn">Save Event</div>
+      <div id='hour13' class = "col-2 time-block">1:00pm</div>
+      <textarea id='event13' class = "col-9 textarea">Insert plans here</textarea>
+      <button id='btn13' class = "col-1 btn-primary saveBtn">Save Event</button>
 
     </div>
 
     <div class = "row">
-      <div class = "col-sm-2 hour">2:00PM</div>
-      <div id='14' class = "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 btn-primary saveBtn">Save Event</div>
+      <div id = 'hour14' class = "col-2 time-block">2:00PM</div>
+      <textarea id='event14' class = "col-9 textarea">Insert plans here</textarea>
+      <button id='btn14' class = "col-1 btn-primary saveBtn">Save Event</button>
 
     </div>
 
     <div class = "row">
-      <div class = "col-sm-2 hour">3:00PM</div>
-      <div id='15' class = "col-sm-8 td time-block">Insert plans here</div>
-      <div class = "col-sm-2 btn-primary saveBtn">Save Event</div>
+      <div id='hour15' class = "col-2 time-block">3:00PM</div>
+      <textarea id='event15' class = "col-9 textarea">Insert plans here</textarea>
+      <button id='btn15' class = "col-1 btn-primary saveBtn">Save Event</button>
 
     </div>
 
-    <div class = "row 4pmrow">
-      <div class = "col-sm-2 hour">4:00PM</div>
-      <div id='16' class = "col-sm-8 td time-block textarea">Insert plans here</div>
-      <div class = "col-sm-2 btn-primary saveBtn 4btn">Save Event</div>
+    <div class = "row ">
+      <div id ='hour16' class = "col-2 time-block">4:00PM</div>
+      <textarea id='event16' class = "col-9 textarea">Insert plans here</textarea>
+      <button id='btn16' class = "col-1 btn-primary saveBtn ">Save Event</button>
   
 
     </div>
 
     <div class = "row ">
-      <div class = "col-sm-2 hour">5:00PM</div>
-      <div id='17' class = "col-sm-8 td time-block textarea">Insert plans here</div>
-      <div id='5btn' class = "col-sm-2 btn-primary saveBtn">Save Event</div>
+      <div id ='hour17' class = "col-2 time-block">5:00PM</div>
+      <textarea id='event17' class = "col-9 textarea">Insert plans here</textarea>
+      <button id='btn17' class = "col-1 btn-primary saveBtn">Save Event</button>
 
     </div> 
 
-      <div style = "font-size:25px" id = "todaysdate"></div>
+     <!-- <div style = "font-size:25px" id = "todaysdate"></div> -->
 
     </div> 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src='script.js'></script>
 
     <script type="text/javascript">
 
@@ -184,36 +178,8 @@
      // var numHours = document.querySelector(".hour")
     
     // create a table with different colors based on 
-      for(var i; i < savedEvent.length; i++)
-    {
-
-
-
-      $('#dayPlanner').append
-      
-      var elHour = savedEvent[i].hour
-
-      $()
-     
-      if(elHour < currHour)
-      {
-
-      var row = $('<tr></tr>').attr({ class: ["textarea", "row", "past"].join(' ') }).appendTo(mytable);
-      }
-      else if(elHour === currHour)
-      {
-        var row = $('<tr></tr>').attr({ class: ["textarea", "row", "present"].join(' ') }).appendTo(mytable);
-
-      }
-      if(elHour > currHour)
-      {
-        var row = $('<tr></tr>').attr({ class: ["textarea", "row", "future"].join(' ') }).appendTo(mytable);
-      }
-    }
-
-    mytable.appendTo(".container")
     
-      
+    
      
      
    //   var id = savedEvent[i]
