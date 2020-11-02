@@ -2,7 +2,7 @@ Pirooz Wallace
 10/31/2020
 Day Planner Homework
 
-GitHub Pages: https://attack-theory.github.io/05Planner/
+GitHub Pages: https://attack-theory.github.io/05Planner/Develop
 
 GitHub Repo: https://github.com/attack-theoRy/05Planner
 
