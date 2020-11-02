@@ -72,8 +72,6 @@ eventColors();
 function eventColors() {
 
 
- // if((currHour >= 9) && (currHour <= 17)) {
-
     for (var i = 9; i <= 17 ; i++) { 
      
    // add class for present
@@ -82,7 +80,7 @@ function eventColors() {
           $('#event'+i).addClass('present')
       }
       // color code the past block using past class
-      else if(i < hourNow24 - 5)
+      else if(i < currHour)
       {
           $('#event'+i).addClass('past')
       }
