@@ -29,63 +29,64 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
+      
       <!-- Timeblocks go here -->
      <div class = "row">
-      <div id='hour9' class ="col-2 time-block">9:00AM</div>
+      <div class ="col-2 time-block">9:00AM</div>
       <textarea id='event9' class = "col-9 textarea"></textarea>
       <button id='btn9' class= "col-1 btn-primary saveBtn">Save Event</button>
      </div>
    
     <div class = "row">
-      <div id= 'hour10' class= "col-2 time-block">10:00AM</div>
-      <textarea id='event10' class = "col-9 textarea">Insert plans here</textarea>
+      <div class= "col-2 time-block">10:00AM</div>
+      <textarea id='event10' class = "col-9 textarea"></textarea>
       <button id= 'btn10' class = "col-1 btn-primary saveBtn">Save Event</button>
     </div>
 
     <div class = "row">
-      <div id= 'hour11' class = "col-2 time-block">11:00AM</div>
-      <textarea id='event11' class = "col-9 textarea">Insert plans here</textarea>
-      <button id='btn11' class = "col-1 btn-primary saveBtn">Save Event</button>
+      <div class = "col-2 time-block">11:00AM</div>
+      <textarea id='event11' class = "col-9 textarea"></textarea>
+      <button id='btn11' class = "col-1 btn-primary saveBtn"></button>
     </div>
 
     <div class = "row">
-      <div id='hour12' class = "col-2 time-block">12:00PM</div>
-      <textarea id='event12' class= "col-9 textarea">Insert plans here</textarea>
+      <div  class = "col-2 time-block">12:00PM</div>
+      <textarea id='event12' class= "col-9 textarea"></textarea>
       <button id='btn12' class = "col-1 btn-primary saveBtn">Save Event</button>
     </div>
 
     <div class = "row">
-      <div id='hour13' class = "col-2 time-block">1:00pm</div>
-      <textarea id='event13' class = "col-9 textarea">Insert plans here</textarea>
+      <div  class = "col-2 time-block">1:00pm</div>
+      <textarea id='event13' class = "col-9 textarea"></textarea>
       <button id='btn13' class = "col-1 btn-primary saveBtn">Save Event</button>
 
     </div>
 
     <div class = "row">
-      <div id = 'hour14' class = "col-2 time-block">2:00PM</div>
-      <textarea id='event14' class = "col-9 textarea">Insert plans here</textarea>
+      <div class = "col-2 time-block">2:00PM</div>
+      <textarea id='event14' class = "col-9 textarea"></textarea>
       <button id='btn14' class = "col-1 btn-primary saveBtn">Save Event</button>
 
     </div>
 
     <div class = "row">
-      <div id='hour15' class = "col-2 time-block">3:00PM</div>
-      <textarea id='event15' class = "col-9 textarea">Insert plans here</textarea>
+      <div class = "col-2 time-block">3:00PM</div>
+      <textarea id='event15' class = "col-9 textarea"></textarea>
       <button id='btn15' class = "col-1 btn-primary saveBtn">Save Event</button>
 
     </div>
 
     <div class = "row ">
-      <div id ='hour16' class = "col-2 time-block">4:00PM</div>
-      <textarea id='event16' class = "col-9 textarea">Insert plans here</textarea>
+      <div class = "col-2 time-block">4:00PM</div>
+      <textarea id='event16' class = "col-9 textarea"></textarea>
       <button id='btn16' class = "col-1 btn-primary saveBtn ">Save Event</button>
   
 
     </div>
 
     <div class = "row ">
-      <div id ='hour17' class = "col-2 time-block">5:00PM</div>
-      <textarea id='event17' class = "col-9 textarea">Insert plans here</textarea>
+      <div class = "col-2 time-block">5:00PM</div>
+      <textarea id='event17' class = "col-9 textarea"></textarea>
       <button id='btn17' class = "col-1 btn-primary saveBtn">Save Event</button>
 
     </div> 
@@ -102,44 +103,7 @@
 
     // array of objects that include which hour and what the user input as an event
     // done with 24hr time
-    var savedEvent = [   {
-      hour : 9,
-      strEvent : ''
-    },
-    {
-    hour : 10,
-    strEvent: ''
-    },
-    {
-    hour : 11,
-    strEvent: ''
-    },
-    {
-    hour : 12,
-    strEvent: ''
-    },
-    {
-    hour : 13,
-    strEvent: ''
-    },
-    {
-    hour : 14,
-    strEvent: ''
-    },
-    {
-    hour : 15,
-    strEvent: ''
-    },
-    {
-    hour : 16,
-    strEvent: ''
-    },
-    {
-    hour : 17,
-    strEvent: ''
-    }
-
-     ]
+    
 
      
      var currTime = moment()

@@ -10,155 +10,133 @@ console.log(currTime)
 console.log("current Hour")
 console.log(currHour)
 
-var hourNow24= parseInt(moment().format('HH'));
+var currHour = parseInt(moment().format('HH'));
 
-var hourNowInt = parseInt(currHour);
-
+// test breakpoint
 console.log('check here')
 
-console.log(hourNowInt)
-console.log(hourNow24)
+// debug check
+console.log(currHour)
 
 
-let Timer;
+// global array of savedEvent objects
+var savedEvent = [   {
+  hour : 9,
+  strEvent : ''
+},
+{
+hour : 10,
+strEvent: ''
+},
+{
+hour : 11,
+strEvent: ''
+},
+{
+hour : 12,
+strEvent: ''
+},
+{
+hour : 13,
+strEvent: ''
+},
+{
+hour : 14,
+strEvent: ''
+},
+{
+hour : 15,
+strEvent: ''
+},
+{
+hour : 16,
+strEvent: ''
+},
+{
+hour : 17,
+strEvent: ''
+}
+ ]
 
-const hour1 = $('#time1').text();
-const hour2 = $('#time2').text();
-const hour3 = $('#time3').text();
-const hour4 = $('#time4').text();
-const hour5 = $('#time5').text();
-const hour6 = $('#time6').text();
-const hour7 = $('#time7').text();
-const hour8 = $('#time8').text();
-const hour9 = $('#time9').text();
-
-const hour1Int = parseInt(hour1);
-const hour2Int = parseInt(hour2);
-const hour3Int = parseInt(hour3);
-const hour4Int = parseInt(hour4);
-const hour5Int = parseInt(hour5);
-const hour6Int = parseInt(hour6);
-const hour7Int = parseInt(hour7);
-const hour8Int = parseInt(hour8);
-const hour9Int = parseInt(hour9);
-
-// Saving the event 
+// Saving the events with button presses
+// I feel like there must be a way to consolidate, but
+// didn't have time to try 
 
 $('#btn9').click(function() {
  
- //   if($('#text1').val()) {
- //   localStorage.removeItem('text1');
- // }
-
  savedEvent[0].strEvent = $('#event9').val()
 
- localStorage.setItem("9AM", savedEvent[0].strEvent)
+ localStorage.setItem("savedEvent", JSON.stringify(savedEvent))
 
-  const hour1String = JSON.stringify(hour1);
-  
-  // localStorage.setItem(hour1, $('#text1').val());
 });
 
-$('#btn2').click(function() {
-  if($('#text2').val()) {
-    localStorage.removeItem('text2');
-  }
+$('#btn10').click(function() {
 
-  const hour2String = JSON.stringify(hour2);
+  savedEvent[1].strEvent = $('#event10').val()
 
-  localStorage.setItem(hour2, $('#text2').val());
+ localStorage.setItem("savedEvent", JSON.stringify(savedEvent))
 });
 
-$('#btn3').click(function() {
-  if($('#text3').val()) {
-    localStorage.removeItem('text3');
-  }
+$('#btn11').click(function() {
+  savedEvent[2].strEvent = $('#event11').val()
 
-  const hour3String = JSON.stringify(hour3);
-
-  localStorage.setItem(hour3, $('#text3').val());
-});
-
-$('#btn4').click(function() {
-  if($('#text4').val()) {
-    localStorage.removeItem('text4');
-  }
-
-  const hour4String = JSON.stringify(hour4);
-
-  localStorage.setItem(hour4, $('#text4').val());
-});
-
-$('#btn5').click(function() {
-  if($('#text5').val()) {
-    localStorage.removeItem('text5');
-  }
-
-  const hour5String = JSON.stringify(hour5);
-
-  localStorage.setItem(hour5, $('#text5').val());
-});
-
-$('#btn6').click(function() {
-  if($('#text6').val()) {
-    localStorage.removeItem('text6');
-  }
-
-  const hour6String = JSON.stringify(hour6);
-
-  localStorage.setItem(hour6, $('#text6').val());
-});
-
-$('#btn7').click(function() {
-  if($('#text7').val()) {
-    localStorage.removeItem('text7');
-  }
-
-  const hour7String = JSON.stringify(hour7);
-
-  localStorage.setItem(hour7, $('#text7').val());
+ localStorage.setItem("savedEvent", JSON.stringify(savedEvent))
 })
 
-$('#btn8').click(function() {
-  if($('#text8').val()) {
-    localStorage.removeItem('text8');
-  }
+$('#btn12').click(function() {
 
-  const hour8String = JSON.stringify(hour8);
+  savedEvent[3].strEvent = $('#event12').val()
 
-  localStorage.setItem("text8", $('#text8').val());
-})
+  localStorage.setItem("savedEvent", JSON.stringify(savedEvent))
+ });
 
-/*$('#btn9').click(function() { 
-  if($('#text9').val()) {
-    localStorage.removeItem('text9');
-  }
+$('#btn13').click(function() {
+  savedEvent[4].strEvent = $('#event13').val()
 
-  const hour9String = JSON.stringify(hour9);
+  localStorage.setItem("savedEvent", JSON.stringify(savedEvent))
+ });
 
-  localStorage.setItem(hour9, $('#text9').val());
-})
-*/
+$('#btn14').click(function() {
+  savedEvent[5].strEvent = $('#event14').val()
+
+  localStorage.setItem("savedEvent", JSON.stringify(savedEvent))
+ });
+
+$('#btn15').click(function() {
+  savedEvent[6].strEvent = $('#event15').val()
+
+  localStorage.setItem("savedEvent", JSON.stringify(savedEvent))
+ });
+
+$('#btn16').click(function() {
+  savedEvent[7].strEvent = $('#event16').val()
+
+  localStorage.setItem("savedEvent", JSON.stringify(savedEvent))
+ });
+
+ $('#btn17').click(function() {
+  savedEvent[8].strEvent = $('#event17').val()
+
+  localStorage.setItem("savedEvent", JSON.stringify(savedEvent))
+ });
+
 
 // Display the time using moment.js
 
  $('#currentDay').append(currTime);
 
 // Color coding to reflect whether the time slot is in the past, the present or the future 
-
 eventColors();
 
 function eventColors() {
 
- // TIMER = setInterval(colorCoding, 1000);
-  
- // Test check: hourNow24 = 20;
-  if((hourNow24 - 5) >= 9 && (hourNow24 -5) <= 17) {
+
+ // if((currHour >= 9) && (currHour <= 17)) {
 
     for (var i = 9; i <= 17 ; i++) { 
      
    // add class for present
-      if(i === hourNow24)
+      if(i == currHour)
       {
           $('#event'+i).addClass('present')
       }
@@ -172,9 +150,28 @@ function eventColors() {
           $('#event'+i).addClass('future')
       }
       
-   
-    }
+  //  }
 
   }
  
+}
+
+loadEvents()
+
+// load the saved events
+function loadEvents()
+{
+
+  // get the object from storage
+  savedEvent = JSON.parse(localStorage.getItem('savedEvent'))
+
+ // savedEvent = loadedEvent;
+
+  // cycle through all the textarea elements and setting the text of the localStorage object
+  for (var i = 0; i < 9; i++)
+  {
+    var eventID = i+9
+    $('#event' + eventID).text(savedEvent[i].strEvent)
+  }
+
 }
