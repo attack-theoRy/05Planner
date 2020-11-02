@@ -2,11 +2,12 @@
 
 // Global variables
 var currTime = moment().format('dddd, MMMM Do YYYY');
-var currHour = moment().format('h');
+
 
 // debug moment objects
 console.log(currTime)
 
+// debug check
 console.log("current Hour")
 console.log(currHour)
 
@@ -17,11 +18,8 @@ var currHour = parseInt(moment().format('HH'));
 // test breakpoint
 console.log('check here')
 
-// debug check
-console.log(currHour)
 
-
-// global array of savedEvent objects
+// global array of savedEvent objects to save and retrieve from localStorage
 var savedEvent = [   {
   hour : 9,
   strEvent : ''
@@ -72,6 +70,7 @@ eventColors();
 function eventColors() {
 
 
+  // run through each hour 9am - 5pm (using 24hr time)
     for (var i = 9; i <= 17 ; i++) { 
      
    // add class for present
@@ -93,13 +92,14 @@ function eventColors() {
  
 }
 
+// load events from localStorage
 loadEvents()
 
 // load the saved events
 function loadEvents()
 {
 
-  // get the object from storage
+  // get the array of objects from storage and parse
   savedEvent = JSON.parse(localStorage.getItem('savedEvent'))
 
   // cycle through all the textarea elements and setting the text of the localStorage object
@@ -113,17 +113,20 @@ function loadEvents()
 }
 
 // Saving the events with button presses
-// I feel like there must be a way to consolidate, but
-// didn't have time to try 
+// I feel like there must be a way to consolidate into a single listener, but
+// didn't have time to try so is currently just hardcoded
 
 $('#btn9').click(function() {
  
+  // set object to value of textarea box
  savedEvent[0].strEvent = $('#event9').val()
 
+ // set the localStorage object with the current savedEvent object
  localStorage.setItem("savedEvent", JSON.stringify(savedEvent))
 
 });
 
+// all the way down the same function for each button
 $('#btn10').click(function() {
 
   savedEvent[1].strEvent = $('#event10').val()

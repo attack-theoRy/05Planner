@@ -31,6 +31,8 @@
     <div class="container">
       
       <!-- Timeblocks go here -->
+
+    <!--Each row is different hour with editable textarea box and a save button-->
      <div class = "row">
       <div class ="col-2 time-block">9:00AM</div>
       <textarea id='event9' class = "col-9 textarea"></textarea>
@@ -46,7 +48,7 @@
     <div class = "row">
       <div class = "col-2 time-block">11:00AM</div>
       <textarea id='event11' class = "col-9 textarea"></textarea>
-      <button id='btn11' class = "col-1 btn-primary saveBtn"></button>
+      <button id='btn11' class = "col-1 btn-primary saveBtn">Save Event</button>
     </div>
 
     <div class = "row">
@@ -94,58 +96,26 @@
 
     </div> 
 
+    <!--Add jquery for html manipulation and moment for date access / manipulation-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src='script.js'></script>
 
     <script type="text/javascript">
 
-
-    // array of objects that include which hour and what the user input as an event
-    // done with 24hr time
-    
+     
+    // get the current time using moment js
+     var currTime = moment()
 
      
-     var currTime = moment()
-     var currDate = Date()
-
-     console.log(currDate)
-    //let time = currTime.format();
-    console.log(currTime.format('day,month, year'));
-    console.log(currTime.format("DD"))
-    console.log(currTime.format("MM"))
-    console.log(currTime.format("YY"))
-
-    console.log(moment().dayOfYear())
-
-    console.log(currTime.month(currTime.format("MM")))
-
-  // return what hour it currently is
-  //  console.log(currTime.hour())
-
-    $('p#currentDay').text(currDate)
-
+    // get the current hour using moment js
     var currHour = currTime.hour()
 
-    $('.container').append('<div class="row')
+     // get the current date with proper format for top of the planner
+     var currDate = moment().format('dddd, MMMM Do YYYY');
 
-
-    var mytable = $('<table></table>').attr({ id: "basicTable" });
-
-
-   // var xday = currTime.format('DD')
-
-
-    //console.log($(".currTime").text(moment(currTime).format('h:mm:ss a')));
-
-    
-    
-
-      $('#saveBtn').on('click', function() {
-
-
-
-      })
+     // debug check 
+     console.log(currDate)
 
     </script>
 
