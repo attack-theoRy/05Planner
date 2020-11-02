@@ -1,15 +1,17 @@
 
 
 // Global variables
-
 var currTime = moment().format('dddd, MMMM Do YYYY');
 var currHour = moment().format('h');
 
+// debug moment objects
 console.log(currTime)
 
 console.log("current Hour")
 console.log(currHour)
 
+
+// get the current hour, used to compare 
 var currHour = parseInt(moment().format('HH'));
 
 // test breakpoint
@@ -57,6 +59,60 @@ hour : 17,
 strEvent: ''
 }
  ]
+
+
+
+ // Display the time using moment.js
+$('#currentDay').append(currTime);
+
+// call when first loading
+eventColors();
+
+// Color coding to reflect whether the time slot is in the past, the present or the future 
+function eventColors() {
+
+
+ // if((currHour >= 9) && (currHour <= 17)) {
+
+    for (var i = 9; i <= 17 ; i++) { 
+     
+   // add class for present
+      if(i == currHour)
+      {
+          $('#event'+i).addClass('present')
+      }
+      // color code the past block using past class
+      else if(i < hourNow24 - 5)
+      {
+          $('#event'+i).addClass('past')
+      }
+      // color the future blocks with the future class
+      else{
+          $('#event'+i).addClass('future')
+      }
+
+  }
+ 
+}
+
+loadEvents()
+
+// load the saved events
+function loadEvents()
+{
+
+  // get the object from storage
+  savedEvent = JSON.parse(localStorage.getItem('savedEvent'))
+
+  // cycle through all the textarea elements and setting the text of the localStorage object
+  for (var i = 0; i < 9; i++)
+  {
+    // set the textarea to the saved strings
+    var eventID = i+9
+    $('#event' + eventID).text(savedEvent[i].strEvent)
+  }
+
+}
 
 // Saving the events with button presses
 // I feel like there must be a way to consolidate, but
@@ -121,57 +177,3 @@ $('#btn16').click(function() {
  });
 
 
-// Display the time using moment.js
-
- $('#currentDay').append(currTime);
-
-// Color coding to reflect whether the time slot is in the past, the present or the future 
-eventColors();
-
-function eventColors() {
-
-
- // if((currHour >= 9) && (currHour <= 17)) {
-
-    for (var i = 9; i <= 17 ; i++) { 
-     
-   // add class for present
-      if(i == currHour)
-      {
-          $('#event'+i).addClass('present')
-      }
-      // color code the past block using past class
-      else if(i < hourNow24 - 5)
-      {
-          $('#event'+i).addClass('past')
-      }
-      // color the future blocks with the future class
-      else{
-          $('#event'+i).addClass('future')
-      }
-      
-  //  }
-
-  }
- 
-}
-
-loadEvents()
-
-// load the saved events
-function loadEvents()
-{
-
-  // get the object from storage
-  savedEvent = JSON.parse(localStorage.getItem('savedEvent'))
-
- // savedEvent = loadedEvent;
-
-  // cycle through all the textarea elements and setting the text of the localStorage object
-  for (var i = 0; i < 9; i++)
-  {
-    var eventID = i+9
-    $('#event' + eventID).text(savedEvent[i].strEvent)
-  }
-
-}
