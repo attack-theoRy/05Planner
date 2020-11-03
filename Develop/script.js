@@ -112,8 +112,25 @@ function loadEvents()
 
 }
 
+
+
+
+// short non-working attempt to consolidate into single listener
+
+// $('#saveBtn').click(function() {
+
+ // var selection = event.target
+
+  //selection.getItem()
+
+  
+
+  
+//})
+
+
 // Saving the events with button presses
-// I feel like there must be a way to consolidate into a single listener, but
+// I feel like there must be a way to consolidate these into a single listener, but
 // didn't have time to try so is currently just hardcoded
 
 $('#btn9').click(function() {
