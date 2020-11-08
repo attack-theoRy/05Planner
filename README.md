@@ -15,7 +15,8 @@ Here we are at 2:00PM
 <img src='https://user-images.githubusercontent.com/20414600/97927017-0c23e900-1d19-11eb-9e9d-767c3c2fa9af.png' alt=day planner screen>
 
 And here we are on a different day at 4:00pm (with a better title too)
-<img src='Assets\DayPlannerSc2.png' alt=day planner screen 2>
+
+<img src='Assets/DayPlannerSc2.png' alt=day planner screen 2>
 
 
 Saved tasks are persistent (after clicking the save event button) through refreshes and browser closing/opening. Used moment js legacy code to retrieve and manipulate current date/time data. Code is generally clean and efficient although would have liked to condensed button listeners into a single function.
