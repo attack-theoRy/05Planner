@@ -15,8 +15,7 @@ APIs and CSS Frameworks Used:
 - Fontawesome stylesheet
 
 
-
-Simple Day Planner that displays the date at the top and has a row for every hour that can be edited to save tasks / events for that day using the blue buttons on the right of the hour (save events). Save buttons change colors when mouse is hovering over them. The rows are color coded at run-time using jquery, moment.js, and supplied stylesheet so that the hours that are already past are grey, the current hour is in red and the future hours are green.
+  A basic Day Planner that displays the date at the top and has a row for every hour that can be edited to save tasks / events for that day using the blue buttons on the right of the hour (save events). Save buttons change colors when mouse is hovering over them. The rows are color coded at run-time using jquery, moment.js, and supplied stylesheet so that the hours that are already past are grey, the current hour is in red and the future hours are green.
 
 Here we are at 2:00PM  (title has since been changed)
 <img src='https://user-images.githubusercontent.com/20414600/97927017-0c23e900-1d19-11eb-9e9d-767c3c2fa9af.png' alt=day planner screen>
